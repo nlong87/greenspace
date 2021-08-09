@@ -259,7 +259,7 @@ function greenspace_filter_portfolio_gallery( $null, $attr ) {
     ob_start(); ?>
     <div class="greenspace-slideshow">
         <?php foreach( $attachments as $attachment) {
-            printf( '<div>%s</div>', wp_get_attachment_image($attachment->ID, 'full', false, ['class' => 'mx-auto'] ) );
+            printf( '<div>%s</div>', wp_get_attachment_image($attachment->ID, 'large', false, ['class' => 'mx-auto'] ) );
         } ?>
     </div>
     <script>
@@ -371,7 +371,15 @@ function greenspace_header_image() {
 
     $banner_string = 'banner-%%slug%%.jpg';
     $banner_path = '/assets/images/';
-    $page_slug = get_post_field( 'post_name' );
+
+    $post = get_post();
+
+    if ( $post->post_parent ) {
+        $parent = get_post( $post->post_parent );
+        $page_slug = $parent->post_name;
+    } else {
+        $page_slug = $post->post_name;
+    }
 
 
     if ( file_exists( str_replace('%%slug%%', $page_slug, get_template_directory() . $banner_path . $banner_string) ) ) {

@@ -27,8 +27,7 @@
 		"webpack-cli": "^4.2.0"
 	},
 	"scripts": {
-		"start": "chokidar \"**/*.scss\" -c \"npm run build\" --initial",
-		"build:style": "sass assets/sass/style.scss:style.css --style=expanded --source-map",
+		"build:style": "sass scss/style.scss:style.css --style=expanded --source-map",
 		"build": "run-s \"build:*\"",
 		"watch": "chokidar \"**/*.scss\" -c \"npm run build\" --initial"
 	}
