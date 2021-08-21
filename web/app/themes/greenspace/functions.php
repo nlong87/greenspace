@@ -100,18 +100,11 @@ function greenspace_scripts() {
 	// Print styles.
 	wp_enqueue_style( 'greenspace-print-style', get_template_directory_uri() . '/assets/css/print.css', array(), wp_get_theme()->get( 'Version' ), 'print' );
 
-	wp_enqueue_script( 'greenspace-bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.js', array('jquery'), wp_get_theme()->get( 'Version' ) );
+	wp_enqueue_script( 'greenspace-js', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), wp_get_theme()->get( 'Version' ) );
 
 	// Threaded comment reply styles.
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
-	}
-
-	wp_register_script( 'greenspace-slick-slider', get_template_directory_uri() . '/assets/js/slick.min.js', array('jquery'), wp_get_theme()->get( 'Version' ), true );
-
-	// Main navigation scripts.
-	if ( has_nav_menu( 'primary' ) ) {
-	    // Enqueue navigation script
 	}
 
     // No Gutenberg blocks

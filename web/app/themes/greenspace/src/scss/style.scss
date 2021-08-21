@@ -1,0 +1,214 @@
+@import "_header";
+
+@import url(https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap);
+
+@import "bootstrap";
+@import "slick";
+@import "slick-theme";
+
+.site-brand {
+
+  padding: 4rem 0;
+  text-align: center;
+
+  .site-name {
+    font-size: 6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: .75;
+
+    @include media-breakpoint-down(md) {
+      font-size: 4rem;
+    }
+
+    @include media-breakpoint-down(sm) {
+      font-size: 3rem;
+    }
+
+    a, a:hover, a:active, a:focus {
+      text-decoration: none;
+      color: inherit;
+      outline: none;
+    }
+  }
+
+  .site-description {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-top: .5rem;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 1.25rem;
+    }
+  }
+
+}
+
+.site-logo .custom-logo {
+  margin: 0 auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+h1 {
+  font-family: $font-family-sans-serif;
+  font-size: 3rem;
+  text-align: center;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid $gray-300;
+  text-transform: uppercase;
+}
+
+h2 {
+  text-transform: uppercase;
+}
+
+@include media-breakpoint-up(lg) {
+  .site-content {
+    min-height: 500px;
+  }
+
+}
+
+.btn {
+  text-transform: uppercase;
+}
+
+.btn-primary.active {
+  background: #000000;
+}
+
+#masthead {
+
+  .banner-image {
+    height: auto;
+
+    img {
+      width: 100%;
+      max-width: 100%;
+    }
+
+  }
+
+  .banner-separator {
+    background: $primary;
+    display: block;
+    width: 100%;
+    height: 4px;
+  }
+
+  nav {
+    font-size: 1.375rem;
+  }
+
+  nav .container {
+    max-width: 1175px;
+
+    @include media-breakpoint-down(xxl) {
+      max-width: 1050px;
+    }
+
+    @include media-breakpoint-down(xl) {
+      max-width: 880px;
+    }
+  }
+
+  .nav-link {
+    text-transform: uppercase;
+  }
+
+}
+
+.blockquote-footer {
+  text-align: right;
+}
+
+.footer-navigation {
+
+  .nav-item:first-child .nav-link {
+    padding-left: 0;
+  }
+
+  .nav-link {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.wpforms-field-container {
+
+  label {
+    @extend .form-label;
+  }
+
+  input[type="text"], input[type="email"], textarea {
+    @extend .form-control;
+  }
+
+  .wpforms-required-label {
+    color: $danger;
+  }
+
+  .wpforms-field {
+    margin-bottom: 1rem;
+  }
+
+  .wpforms-field-row {
+    display: flex;
+    flex: 1 0 auto;
+    align-items: stretch;
+
+    div {
+      padding-left: 1rem;
+      padding-right: 1rem;
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+
+      flex-grow: 1;
+    }
+
+  }
+
+  .wpforms-field-sublabel {
+    font-size: .75rem;
+    color: $gray-700;
+  }
+
+}
+
+.entry-content {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.alignleft {
+  @extend .float-start;
+  padding: 0 1rem 1rem 0;
+}
+
+.alignright {
+  @extend .float-end;
+  padding: 0 0 1rem 1rem;
+
+  @include media-breakpoint-down(md) {
+
+    &.size-medium {
+      float: none !important;
+      padding-left: 0;
+      margin: 0 auto;
+      display: block;
+    }
+
+  }
+}

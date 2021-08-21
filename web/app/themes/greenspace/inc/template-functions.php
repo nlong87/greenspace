@@ -314,7 +314,7 @@ function greenspace_portfolio_shortcode() {
                 'post_type' => 'attachment',
                 'post_mime_type' => 'image',
                 'order' => 'ASC',
-                'orderby' => 'menu_order',
+                'orderby' => 'name',
                 'numberposts' => 1
             ) );
 
@@ -364,7 +364,7 @@ function greenspace_get_portfolio_child_pages() {
         $posts = [];
     }
 
-    return ( empty($posts) ) ? false : $posts;
+	return ( empty($posts) ) ? false : $posts;
 }
 
 function greenspace_header_image() {

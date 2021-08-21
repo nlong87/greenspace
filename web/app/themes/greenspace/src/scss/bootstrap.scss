@@ -1,0 +1,69 @@
+
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../node_modules/bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1140px,
+        xxl: 1280px
+);
+
+
+$green: #488b00;
+
+$gray-100: #f8f9fa;
+$gray-200: #E4E3E3;
+$gray-300: #C8C7C7;
+$gray-400: #ADABAB;
+$gray-500: #918F90;
+$gray-600: #767374;
+$gray-700: #5A5758;
+$gray-800: #3F3B3C;
+$gray-900: #231f20;
+
+
+$primary: $gray-900;
+$secondary: $green;
+$success: $green;
+//$info: $cyan !default;
+//$warning: $yellow !default;
+//$danger: $red !default;
+//$light: $gray-100 !default;
+$dark: $gray-900;
+
+$text-muted: #ced4da;
+
+$font-family-sans-serif: "Antic Slab", system-ui, -apple-system, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+
+$navbar-dark-color: #fff;
+
+
+$btn-border-radius: 0;
+$btn-border-radius-sm: 0;
+$btn-border-radius-lg: 0;
+
+$btn-hover-bg-shade-amount: 40%;
+
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
+// 4. Include any optional Bootstrap components as you like
+@import "../node_modules/bootstrap/scss/root";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+@import "../node_modules/bootstrap/scss/utilities";
+@import "../node_modules/bootstrap/scss/utilities/api";
+@import "../node_modules/bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/tables";
+@import "../node_modules/bootstrap/scss/forms";
+@import "../node_modules/bootstrap/scss/nav";
+@import "../node_modules/bootstrap/scss/navbar";
+@import "../node_modules/bootstrap/scss/transitions";
+@import "../node_modules/bootstrap/scss/buttons";
